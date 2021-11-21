@@ -5,7 +5,7 @@ export const createConfig = () => {
     return new Conf({
         fileExtension: 'yaml',
         cwd: __dirname,
-        serialize: yaml.safeDump,
-        deserialize: yaml.safeLoad,
+        serialize: yaml.dump,
+        deserialize: yaml.load,
     });
 };

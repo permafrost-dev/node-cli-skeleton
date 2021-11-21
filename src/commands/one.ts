@@ -7,6 +7,7 @@ export const one = (program: Command, config: Conf) => {
         .command('one')
         .description('first command')
         .action(() => {
+            config.set('one.timestamp', new Date().toISOString());
             console.log('one one one');
         });
 };
