@@ -1,13 +1,12 @@
-import { Command } from 'commander';
-import Conf from 'conf';
+import { Application } from '@/Application';
 
 // eslint-disable-next-line no-unused-vars
-export const one = (program: Command, config: Conf) => {
-    return program
+export const one = (app: Application) => {
+    return app
         .command('one')
         .description('first command')
         .action(() => {
-            config.set('one.timestamp', new Date().toISOString());
+            app.config.set('one.timestamp', new Date().toISOString());
             console.log('one one one');
         });
 };

@@ -1,9 +1,7 @@
-import { Command } from 'commander';
-import Conf from 'conf';
+import { Application } from '@/Application';
 
-// eslint-disable-next-line no-unused-vars
-export const three = (program: Command, config: Conf) => {
-    return program
+export const three = (app: Application) => {
+    return app
         .command('three', { isDefault: true })
         .description('third command')
         .option('-n,--number <number>', 'a number')
